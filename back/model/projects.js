@@ -1,5 +1,5 @@
 import { DataTypes, Model } from "sequelize";
-import sequelize from "../database/database-client.js";
+import sequelize from "../database/database.js";
 
 class Projects extends Model {}
 
