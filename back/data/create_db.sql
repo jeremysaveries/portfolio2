@@ -3,22 +3,26 @@ SET client_encoding TO 'UTF8'; -- Encodage
 BEGIN; -- Début de la transaction
 
 -- Suppression des tables existantes avant re-création
-DROP TABLE IF EXISTS "users", projets CASCADE;
+DROP TABLE IF EXISTS  "images", "users", projets CASCADE;
 
-CREATE TABLE projets (
+CREATE TABLE projects (
   id SERIAL PRIMARY KEY,
-  titre VARCHAR(255) NOT NULL,
+  title VARCHAR(255) NOT NULL,
   description TEXT,
   url VARCHAR(255),
-  date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  user_id INTEGER,
+  image VARCHAR(255),  -- Add here the image column which contains the path or URL of the image
+
+  FOREIGN KEY (user_id) REFERENCES users(id)  -- The foreign key pointing to the users table
 );
 
-CREATE TABLE "users" (
+CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   email VARCHAR(255) UNIQUE NOT NULL,
-  mot_de_passe VARCHAR(255) NOT NULL,  -- Pense à sécuriser le mot de passe avec du hashing
-  nom VARCHAR(255),
-  date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  password VARCHAR(255) NOT NULL,  -- Remember to hash the password for security
+  name VARCHAR(255),
+  creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-COMMIT;
+COMMIT; 
