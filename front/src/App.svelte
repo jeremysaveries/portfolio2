@@ -1,25 +1,30 @@
 <script>
   // @ts-nocheck
-    import { onMount } from "svelte";  // 🚀 Ajout de l'import nécessaire
-    import CardWithModel from "./utils/cardWithModal.svelte";
-    import ContactForm from "./utils/contactForm.svelte";
-    import Softskill from "./utils/softskill.svelte";
-    import Admin from "./pages/login.svelte";
-  
-    let pathname = "";
-  
-    // Récupérer l'URL actuelle
-    onMount(() => {
-      pathname = window.location.pathname;
-    });
-  </script>
-  
-  {#if pathname === "/admin"}
-    <Admin />
-  {:else}
-    <!-- Ton portfolio -->
-  
-    <header>
+  import CardWithModel from "./utils/cardWithModal.svelte";
+  import ContactForm from "./utils/contactForm.svelte";
+  import Softskill from "./utils/softskill.svelte";
+  import useInView  from "svelte-intersection-observer";
+
+  // Références pour les éléments
+  let sectionRef1, sectionRef2, sectionRef3, sectionRef4;
+
+  // Variables pour gérer la visibilité
+  let isVisible1 = false, isVisible2 = false, isVisible3 = false, isVisible4 = false;
+
+  // Options pour l'observation de l'intersection
+  let options = { threshold: 0.2 };
+
+  // Fonction de callback, si nécessaire, ou utilisation directe de l'état dans le template
+  function handleVisibility(entry, elementIndex) {
+    if (elementIndex === 1) isVisible1 = entry.isIntersecting;
+    if (elementIndex === 2) isVisible2 = entry.isIntersecting;
+    if (elementIndex === 3) isVisible3 = entry.isIntersecting;
+
+  }
+
+</script>
+
+<header>
       <div class="headerContainer">
         <ul class="titleHeader">
           <li class="firstName">jeremy</li>
@@ -36,8 +41,12 @@
   
         <div class="mainContent">
           <div class="présentation">
-            <p>
+            <p>                                 
               À 34 ans, je suis actuellement en reconversion pour travailler dans le milieu du développement web. Suite à un titre professionnel niveau bac +2 Développeur Web à l'école Oclock, j’ai acquis les bases de plusieurs langages web (HTML, CSS, JavaScript), la gestion de bases de données ainsi que l'utilisation de logiciels tels que Figma, que j’utilise régulièrement pour créer des maquettes. J’ai ensuite pu exercer et améliorer ces compétences lors d’un stage d’un mois aux côtés de développeurs web expérimentés.
+
+              Aujourd’hui, je suis à la recherche d’un CDI en tant que développeur full stack, et je propose également mes services en freelance pour des projets web.
+              
+              Vous pouvez télécharger mon CV ci-dessous et me contacter directement via le formulaire de contact plus bas.
             </p>
           </div>
   
@@ -67,10 +76,14 @@
           </div>
         </div>
   
-        <section>
+        <section bind:this={sectionRef1} class="fade-in {isVisible1 ? 'visible' : ''}">
+         
           <h2 class="softskillTittle">Mes compétences</h2>
           <Softskill />
         </section>
+        {#if sectionRef1}
+  {useInView(sectionRef1, options, handleVisibility)}
+{/if}
   
         <section>
           <div class="projets">
@@ -106,6 +119,7 @@
           </div>
         </section>
       </div>
+      </main>
   
       <footer>
         <div class="footerContainer">
@@ -113,15 +127,25 @@
           <p>© jeremysaveriesdev.com. All rights reserved</p>
         </div>
       </footer>
-  
+
+
       <style>
         @import url("/css/reset.css");
         @import url("/css/style.css");
+        
         @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
         @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css");
         @import "@fortawesome/fontawesome-free/css/all.min.css";
+      
+
+        .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  .fade-in.visible {
+    opacity: 1;
+  }
       </style>
-    </main>
-  {/if} <!-- 🔥 Fermeture correcte du bloc {#if} -->
+ 
   
 
