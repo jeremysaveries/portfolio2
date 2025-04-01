@@ -1,68 +1,96 @@
 <script>
     import "@fortawesome/fontawesome-free/css/all.min.css";
+    
+
   </script>
   
   <div class="softskillContainer">
-    <ul class="softskillDev">
+    <h2 class="titleSkill">Front :</h2>
+    <ul class="softskillFront">
       <li>
+        <span>HTML</span>
         <i class="fa-brands fa-html5"></i>
-        <p>html</p>
       </li>
       <li>
-        <i class="fa-brands fa-css"></i>
-        <p>css</p>
+        <span>CSS</span>
+        <i class="fa-brands fa-css3"></i>
       </li>
       <li>
+        <span>JavaScript</span>
         <i class="fa-brands fa-js"></i>
-        <p>Javascript</p>
       </li>
       <li>
-        <i class="fa-brands fa-php"></i>
-        <p>php</p>
+        <span>Svelte</span>
+        <i class="icon-svelte"></i>
       </li>
     </ul>
   
-  
+    <h2 class="titleSkill">Back :</h2>
+    <ul class="softskillBack">
+      <li>
+        <span>Node</span>
+        <i class="fa-brands fa-node"></i>
+      </li>
+      <li>
+        <span>Express</span>
+        <i class="fa-brands fa-express"></i>
+      </li>
+      <li>
+        <span>PostgreSQL</span>
+        <i class="icon-postgresql"></i>
+      </li>
+      <li>
+        <span>Sequelize</span>
+        <i class="icon-sequelize"></i>
+      </li>
+    </ul>
   </div>
   
+  
   <style>
-    .softskillContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+   @import url("/public/fonts/style.css");
   
-    .softskillDev {
-      list-style: none;
-      background-color: #34495e;
-      column-count: 2;
-      width: 300px;
-      border-radius: 20px;
-      height: 186px;
-      color: white;
-      margin-bottom: 8em;
-    }
-    .softskillDev p {
-      font-size: 1em;
-    }
-    .softskillDev i {
-    font-size: 2em;
-    margin-top: 1em;
-    }
+   .titleSkill {
+  color: white;
+  font-size: xx-large;
+}
 
-    
+.softskillContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3em;
+}
 
-    .softskillDesign {
-      list-style: none;
-      background-color: #34495e;
-      width: 300px;
-      margin-bottom: 6em;
-      border-radius: 20px;
-    }
+.softskillFront, .softskillBack {
+  color: #ffc048;
+  list-style: none;
+  font-size: 2em;
+  padding: 0;
+}
+
+.softskillFront li, .softskillBack li {
+  display: flex;
+  align-items: center; /* Centre verticalement */
+  gap: 10px; /* Ajoute de l'espace entre le texte et l'icône */
+  margin-bottom: 8px; /* Ajoute un petit espace entre chaque ligne */
+}
+
+.softskillFront ul, .softskillBack ul {
+  display: flex;
+  flex-direction: column; /* Aligne les éléments en colonne */
+  align-items: center; /* Centre les éléments horizontalement */
+  gap: 1em;
+}
+
+
+.softskillFront i, .softskillBack i {
+  color: white; /* Assure la couleur blanche */
+}
+
   
-    .devtitle {
-      color: white;
-    }
+  
+  
   
     @media (max-width: 768px) {
       .softskillDev {
