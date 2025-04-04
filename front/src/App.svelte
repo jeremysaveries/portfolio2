@@ -84,22 +84,7 @@
   
         <div data-aos="fade-left">
           <div class="cardContainer">
-            <CardWithModel
-              imageSrc="/img/new logo.png"
-              imageAlt="logo du projet"
-              title="Site PetFoster Connect"
-              modalContent="Pet Foster Connect est un site fictif..."
-              modalLinkText="Voir plus"
-              modalLink="https://github.com/mon-projet/petfoster-connect"
-            />
-            <CardWithModel
-              imageSrc="/img/gameCollection.png"
-              imageAlt="logo d'un autre projet"
-              title="Game Collection"
-              modalContent="Game Collection est une application dédiée aux passionnés de jeux vidéo..."
-              modalLinkText="Voir plus"
-              modalLink=""
-            />
+           <p class="attente"> en cour de création</p>
           </div>
         </div>
   
@@ -115,7 +100,7 @@
       <footer>
         <div class="footerContainer">
           <h3 class="footerTitle">by jeremy.</h3>
-          <p>© jeremysaveriesdev.com. All rights reserved</p>
+          <p class="footerText">© jeremysaveriesdev.com. All rights reserved</p>
         </div>
       </footer>
 

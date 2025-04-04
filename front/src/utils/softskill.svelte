@@ -107,6 +107,20 @@
         align-items: baseline;
         gap: 1em;
       }
+
+      .softskillFront{
+        color: #ffc048;
+        list-style: none;
+        font-size: 1em;
+        padding: 0;
+      }
+
+      .softskillBack{
+        color: #ffc048;
+        list-style: none;
+        font-size: 1em;
+        padding: 0;
+      }
     }
   </style>
   

@@ -73,3 +73,19 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@media (max-width: 768px) {
+  body {
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #1e272e;
+    margin: 0;
+  }
+
+  #app {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

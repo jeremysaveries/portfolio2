@@ -113,6 +113,11 @@ li.lastName {
   display: inline-block;
 }
 
+.attente {
+  color: white;
+  font-size: 2em;
+}
+
 .cardContainer {
   display: flex; /* Active Flexbox */
   gap: 20px; /* Ajoute un espace entre les cartes */
@@ -174,4 +179,60 @@ li.lastName {
   color: #ffc048;
   padding-top: 4em;
   font-size: 21px;
+}
+
+.footerText {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  .présentation {
+    font-size: 13px;
+  }
+
+  .postName {
+    font-size: 11px;
+    margin-bottom: 1em;
+  }
+  .photo {
+    height: 319px;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3em;
+  }
+  .inputButton {
+    height: 40px;
+  }
+
+  .softskillTittle {
+    color: #ffc048;
+    font-family: oswald;
+    font-size: 33px;
+  }
+
+  .projetTittle {
+    color: #ffc048;
+    font-family: oswald;
+    font-size: 33px;
+  }
+
+  .contactTitle {
+    color: #ffc048;
+    font-family: oswald;
+    font-size: 33px;
+  }
+  .footerText {
+    color: white;
+  }
 }
