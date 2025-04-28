@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headerContainer {
+  background-color: #1e272e;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3em;
+  height: 90px;
+}
+
+.titleHeader {
+  font-size: 2em;
+  display: flex;
+  margin-top: 10px;
+}
+
+li.firstName {
+  color: #ffc048;
+  font-family: oswald;
+}
+
+li.lastName {
+  color: white;
+  padding-left: 5px;
+  font-family: oswald;
+}
+
+.navBar {
+  margin-top: 1em;
+  gap: 3em;
+  color: white;
+  display: flex;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e272e;
+}
+
+.mainContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titlePoste {
+  padding-left: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.postName {
+  display: inline;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 2px 5px;
+  color: white;
+  background: linear-gradient(to right, #333, #000);
+  font-size: 20px;
+}
+
+.présentation {
+  max-width: 600px;
+  color: white;
+  font-size: 19px;
+  margin-bottom: 5em;
+  margin-right: 2em;
+  line-height: 2em;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 3em;
+  margin-bottom: 9em;
+}
+
+.flexLogo {
+  font-size: 2em;
+  color: white;
+}
+
+.logoList {
+  display: flex;
+  gap: 1em;
+}
+.inputButton {
+  height: 50px;
+  background-color: #ffc048;
+  color: black;
+  border-radius: 10px;
+  border-color: white;
+  font-weight: bold;
+}
+
+.photoProfil {
+  display: flex;
+  justify-content: flex-end;
+  border: solid, white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.photo {
+  max-width: 450px;
+  display: inline-block;
+}
+
+.attente {
+  color: white;
+  font-size: 2em;
+}
+
+.cardContainer {
+  display: flex; /* Active Flexbox */
+  gap: 20px; /* Ajoute un espace entre les cartes */
+  justify-content: center; /* Centre les cartes horizontalement */
+  flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+  padding: 20px; /* Ajoute de l'espace autour du conteneur */
+  background-color: #1e272e; /* Couleur de fond pour le conteneur */
+  padding-bottom: 8em;
+}
+
+.modalContent {
+  color: black;
+}
+
+.projetTittle {
+  color: #ffc048;
+  font-family: oswald;
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 1em;
+}
+
+.filtreList {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  color: white;
+  padding-bottom: 1em;
+}
+
+.contactTitle {
+  color: #ffc048;
+  font-family: oswald;
+  font-size: 50px;
+  padding-top: 4em;
+}
+
+.mailcontainer {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  border: solid;
+  width: 187px;
+  height: 134px;
+}
+
+.mailcontainer i {
+  display: flex;
+  gap: 1em;
+}
+
+.softskillTittle {
+  color: #ffc048;
+  font-family: oswald;
+  font-size: 50px;
+  margin-top: 2em;
+}
+
+.footerTitle {
+  color: #ffc048;
+  padding-top: 4em;
+  font-size: 21px;
+}
+
+.footerText {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  .présentation {
+    font-size: 13px;
+  }
+
+  .postName {
+    font-size: 11px;
+    margin-bottom: 1em;
+  }
+  .photo {
+    height: 319px;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3em;
+  }
+  .inputButton {
+    height: 40px;
+  }
+
+  .softskillTittle {
+    color: #ffc048;
+    font-family: oswald;
+    font-size: 33px;
+  }
+
+  .projetTittle {
+    color: #ffc048;
+    font-family: oswald;
+    font-size: 33px;
+  }
+
+  .contactTitle {
+    color: #ffc048;
+    font-family: oswald;
+    font-size: 33px;
+  }
+  .footerText {
+    color: white;
+  }
+}
