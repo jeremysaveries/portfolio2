@@ -1,16 +1,12 @@
 import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
-import adapter from "@sveltejs/adapter-static";
-import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 
-const config = {
 const config = {
   preprocess: vitePreprocess(),
-
   kit: {
     adapter: adapter(),
     paths: {
-      base: "", // <- Important pour Netlify
+      base: process.env.NODE_ENV === "production" ? "/portfolio2" : "",
     },
     prerender: {
       default: true,
