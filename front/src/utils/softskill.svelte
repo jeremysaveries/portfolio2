@@ -8,19 +8,19 @@
     <h2 class="titleSkill">Front :</h2>
     <ul class="softskillFront">
       <li>
-        <span>HTML</span>
+        <span>HTML </span>
         <i class="fa-brands fa-html5"></i>
       </li>
       <li>
-        <span>CSS</span>
+        <span>CSS </span>
         <i class="fa-brands fa-css3"></i>
       </li>
       <li>
-        <span>JavaScript</span>
+        <span>JavaScript </span>
         <i class="fa-brands fa-js"></i>
       </li>
       <li>
-        <span>Svelte</span>
+        <span>Svelte </span>
         <i class="icon-svelte"></i>
       </li>
     </ul>
@@ -28,19 +28,19 @@
     <h2 class="titleSkill">Back :</h2>
     <ul class="softskillBack">
       <li>
-        <span>Node</span>
+        <span>Node </span>
         <i class="fa-brands fa-node"></i>
       </li>
       <li>
-        <span>Express</span>
+        <span>Express </span>
         <i class="fa-brands fa-express"></i>
       </li>
       <li>
-        <span>PostgreSQL</span>
+        <span>PostgreSQL </span>
         <i class="icon-postgresql"></i>
       </li>
       <li>
-        <span>Sequelize</span>
+        <span>Sequelize </span>
         <i class="icon-sequelize"></i>
       </li>
     </ul>
