@@ -16,7 +16,7 @@
   <div class="card">
     <img class="card-image" src={imageSrc} alt={imageAlt} />
     <div class="card-content">
-      <h3>{title}</h3>
+      <h2>{title}</h2>
       <a href="#" class="btnModal" on:click|preventDefault={toggleModal}>
         voir plus
       </a>
@@ -55,6 +55,8 @@
       overflow: hidden;
       padding: 10px;
       text-align: center;
+    
+     
     }
   
     .card-image {
@@ -69,8 +71,9 @@
       padding: 10px;
     }
   
-    .card-content h3 {
+    .card-content h2 {
       padding-bottom: 1em;
+      color: white;
     }
   
     .btnModal {
@@ -88,7 +91,6 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.5);
       display: flex;
       justify-content: center;
       align-items: center;

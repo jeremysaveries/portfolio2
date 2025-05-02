@@ -10,6 +10,23 @@
   onMount(() => {
     AOS.init({ duration: 1000, once: true });
   });
+  
+  let projets = [];
+
+onMount(async () => {
+  const res = await fetch('http://localhost:1337/api/projets?populate=image');
+  const data = await res.json();
+  projets = data.data.map(p => p); // à adapter selon ta structure
+});
+
+function getImageUrl(projet) {
+  return (
+    projet.image?.url
+      ? 'http://localhost:1337' + projet.image.url
+      : '/img/default.jpg'
+  );
+}
+
 
 
 </script>
@@ -82,11 +99,19 @@
           </div>
         </div>
   
-        <div data-aos="fade-left">
-          <div class="cardContainer">
-           <p class="attente"> en cour de création</p>
-          </div>
-        </div>
+<div data-aos="fade-left">
+  <div class="cards-container">
+    {#each projets as projet}
+      <CardWithModel
+        imageSrc={getImageUrl(projet)}
+        imageAlt={projet.image?.alternativeText || projet.title}
+        title={projet.title}
+        modalContent={projet.description}
+        modalLink={projet.liens}
+        modalLinkText="Voir plus"
+      />
+    {/each}
+  </div>
   
         <section>           
           <div class="contactForm">

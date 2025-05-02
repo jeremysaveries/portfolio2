@@ -47,10 +47,7 @@
    
     }
 
-    .contactForm{
-      padding-top: 4em;
-    }
-  
+    
     .name {
       height: 48px;
       width: 300px;
