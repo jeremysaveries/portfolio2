@@ -1,7 +1,0 @@
-[build]
-  base = "portfolio-front"    # <- très important !
-  publish = "front/dist"
-  command = "npm run build"
-
-[build.environment]
-  NODE_VERSION = "20
