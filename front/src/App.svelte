@@ -60,7 +60,7 @@ function getImageUrl(projet) {
         </div>
           
           <div class="photoProfil">
-            <img class="photo" src="public/img/profil.jpg" alt="photo de profil" />
+            <img class="photo" src="/img/profil.jpg" alt="photo de profil" />
           </div>
       </div>
   
