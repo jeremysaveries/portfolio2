@@ -1,6 +1,6 @@
 [build]
-  base = "portfolio-front"    # <- très important !
-  publish = "front/dist"
+  base = "front"    # <- très important !
+  publish = "dist"
   command = "npm run build"
 
 [build.environment]
