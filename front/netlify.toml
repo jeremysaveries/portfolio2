@@ -1,6 +1,6 @@
 [build]
   base = "front"
-  publish = "dist"
+ publish = "front/dist"
   command = "npm run build"
 
 [build.environment]
